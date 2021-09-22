@@ -2,6 +2,15 @@
 
 dotfiles_dir=~/.dotfiles/ubuntu/
 
+# Loop through all directories in the 'ubuntu' directory of the repo
+for repo_directory in $(find $dotfiles_dir -type d) ; do
+  # Get the directory's path as if it was in the home directory
+  new_directory=~/${repo_directory/#$dotfiles_dir}
+
+  # Create the directory in the home directory
+  mkdir $new_directory
+done
+
 # Loop through all files in the 'ubuntu' directory of the repo
 # A flat list is used, ignoring directories
 for target_path in $(find $dotfiles_dir -type f) ; do
