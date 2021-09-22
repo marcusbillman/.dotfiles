@@ -18,7 +18,7 @@ for target_path in $(find $dotfiles_dir -type f) ; do
   echo
 
   # Skip files whose name begins with an underscore
-  if [ $target_path == */_* ] ; then
+  if [[ $target_path == *"/_"* ]] ; then
     echo "Skipping $target_path"
     continue
   fi
