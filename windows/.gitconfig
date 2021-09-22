@@ -1,0 +1,11 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Marcus Billman
+	email = 54668482+marcusbillman@users.noreply.github.com
+[core]
+	editor = code --wait
+	autocrlf = input
