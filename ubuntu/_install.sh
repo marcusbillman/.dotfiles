@@ -14,6 +14,9 @@ sudo apt install -y nodejs
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Create 'CodeWSL' directory
+mkdir ~/CodeWSL
+
 # Run symlink script
 ~/.dotfiles/ubuntu/_symlink.sh
 
