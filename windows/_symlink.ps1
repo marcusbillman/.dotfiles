@@ -14,14 +14,13 @@ $dotfiles = @{
   "WSL2Proxy.ps1" = "~\WSL2Proxy.ps1"
 }
 
-# Go into the 'windows' directory of the repo because the paths in the hashtable are relative to it
-Set-Location ~\.dotfiles\windows
-
 # Loop through all dotfiles in the hashtable
-foreach ($repo_file in $dotfiles.keys) {
+foreach ($repo_file_name in $dotfiles.keys) {
+  # Get the absolute path to the repo dotfile by prefixing the script's parent path
+  $repo_file_path = "$PSScriptRoot\$repo_file_name"
   # -Force: Overwrite existing files with new symlinks
   # -Confirm: Prompt the user before each symlink is created
-  New-Item -ItemType SymbolicLink -Path $dotfiles[$repo_file] -Target $repo_file -Force -Confirm
+  New-Item -ItemType SymbolicLink -Path $dotfiles[$repo_file_name] -Target $repo_file_path -Force -Confirm
 }
 
 Read-Host "`nFinished creating symlinks. Press Enter to close"
