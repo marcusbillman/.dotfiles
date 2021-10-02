@@ -16,8 +16,8 @@ curl -L https://git.io/n-install | N_PREFIX=~/.n bash -s -- -y lts latest
 # Create 'CodeWSL' directory
 mkdir ~/CodeWSL
 
-# Run symlink script
-~/.dotfiles/ubuntu/_symlink.sh
+# Run symlink script, forcing overwrites
+~/.dotfiles/ubuntu/_symlink.sh -f
 
 # Display important confirmation message
 cowsay -f tux Setup complete!
