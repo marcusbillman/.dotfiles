@@ -8,43 +8,61 @@ After following the installation steps below, all dotfiles will be symlinked to 
 
 ### Windows
 
-**First, the prerequisites.**
+Take care of the prerequisites:
+- Install the latest updates from Windows Update.
+- Install [Visual Studio Code](https://code.visualstudio.com/).
+- Install [Git](https://git-scm.com/). Most settings don't matter because the `.gitconfig` file from the repository will be used later.
+- Install [Windows Terminal](https://aka.ms/terminal).
 
-1. Install the latest updates from Windows Update.
-2. Install [Visual Studio Code](https://code.visualstudio.com/).
-3. Install [Git](https://git-scm.com/). Most settings don't matter because the `.gitconfig` file from the repository will be used later.
-4. Install [Windows Terminal](https://aka.ms/terminal).
+Open PowerShell as an administrator.
 
-**Now it's time for the dotfiles!**
+Clone the repository _(the user directory is recommended for consistency with Ubuntu)_.
 
-5. Open PowerShell as an administrator.
-6. Clone the repository. The user directory is recommended for consistency with Ubuntu, but the symlink script works from any location.
-    ```powershell
-    Set-Location ~
-    git clone https://github.com/marcusbillman/.dotfiles.git
-   ```
-7. Allow script execution and run the symlink script.
-    ```powershell
-    Set-ExecutionPolicy Unrestricted
-    .\.dotfiles\windows\_symlink.ps1
-    ```
+```powershell
+Set-Location ~
+git clone https://github.com/marcusbillman/.dotfiles.git
+```
 
-### Ubuntu (WSL)
+Allow script execution and run the symlink script.
 
-1. Install WSL 2 and Ubuntu by running this command in PowerShell or Command Prompt:
-    ```powershell
-    wsl --install
-    ```
-2. Wait for installation and restart the computer. A terminal window will open, where you choose your UNIX username and password.
-3. Clone the repository.
-    ```bash
-    cd
-    git clone https://github.com/marcusbillman/.dotfiles.git
-    ```
-4. Run the install script.
-    ```bash
-    .dotfiles/ubuntu/_install.sh
-    ```
+```powershell
+Set-ExecutionPolicy Unrestricted
+.\.dotfiles\windows\_symlink.ps1
+```
+
+### WSL installation
+
+Install WSL 2 and Ubuntu using PowerShell or Command Prompt:
+
+```powershell
+wsl --install
+```
+
+Or, if WSL is already installed but Ubuntu isn't, simply install Ubuntu using PowerShell or Command Prompt:
+
+```powershell
+wsl --set-default-version 2
+wsl --install -d Ubuntu
+```
+
+Wait for installation and restart the computer if you're asked to. A terminal window will open, where you choose your UNIX username and password.
+
+### Ubuntu
+
+Clone the repository _(it must be cloned to `~`)_.
+```bash
+cd ~
+git clone https://github.com/marcusbillman/.dotfiles.git
+```
+
+Run the install script.
+```bash
+.dotfiles/ubuntu/_install.sh
+```
+
+When asked to set `zsh` as the default shell, press Enter to confirm. Then type `exit`.
+
+After the script has finished, close the terminal window and launch Windows Terminal. Done!
 
 ## Notes regarding the scripts
 
