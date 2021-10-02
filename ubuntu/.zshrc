@@ -21,3 +21,6 @@ alias c="cd ~/CodeWSL/"
 
 # Fancy greeting message
 ~/motd.sh
+
+# n-install (http://git.io/n-install-repo)
+export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
