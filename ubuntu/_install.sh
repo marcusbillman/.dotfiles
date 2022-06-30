@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Go to home directory
+cd
+
 # Install updates
 sudo apt update
 sudo apt upgrade -y
@@ -13,6 +16,10 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # Install n and Node (latest LTS and latest stable)
 curl -L https://git.io/n-install | N_PREFIX=~/.n bash -s -- -ny lts
 n install latest
+
+# Install micro
+curl https://getmic.ro | bash
+sudo mv micro /usr/bin
 
 # Create 'CodeWSL' directory
 mkdir ~/CodeWSL
