@@ -2,6 +2,4 @@
 	name = Marcus Billman
 	email = 54668482+marcusbillman@users.noreply.github.com
 [credential "https://github.com"]
-	helper = ! auth git-credential
-[credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
+	helper = !/usr/bin/gh auth git-credential
