@@ -24,3 +24,6 @@ alias c="cd ~/CodeWSL/"
 
 # n-install (http://git.io/n-install-repo)
 export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+
+# Use Windows default browser
+export BROWSER="/mnt/c/Windows/explorer.exe"
