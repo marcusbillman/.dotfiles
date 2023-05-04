@@ -8,7 +8,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # Install packages
-sudo apt install -y cmatrix cowsay figlet make ranger sl toilet zsh
+sudo apt install -y cmatrix cowsay figlet gh make ranger sl toilet zsh
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
