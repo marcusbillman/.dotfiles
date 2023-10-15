@@ -15,7 +15,6 @@ source $ZSH/oh-my-zsh.sh
 # ========== USER CONFIGURATION ========== #
 
 # Aliases
-alias mysqlrs="sudo service mysql restart"
 alias update="sudo apt update && sudo apt upgrade -y"
 alias c="cd ~/CodeWSL/"
 
