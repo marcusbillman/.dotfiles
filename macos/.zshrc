@@ -35,4 +35,4 @@ export DOTFILES="$HOME/.dotfiles/macos"
 # ==== STARTUP =============================================================== #
 
 # Fancy greeting message
-~/motd.sh
+$DOTFILES/scripts/hello.sh
