@@ -36,3 +36,6 @@ export DOTFILES="$HOME/.dotfiles/macos"
 
 # Fancy greeting message
 $DOTFILES/scripts/hello.sh
+
+# Programming joke
+$DOTFILES/scripts/joke.sh
