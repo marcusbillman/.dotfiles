@@ -15,6 +15,6 @@ messages=(
 
 message=${messages[$RANDOM % ${#messages[@]}]}
 
-figlet -c -f script $message
+figlet -f script $message
 
 echo
