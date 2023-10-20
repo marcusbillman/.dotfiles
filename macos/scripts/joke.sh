@@ -28,3 +28,5 @@ else
   joke=$(echo "$response" | jq -r '.joke')
   echo -e "${ITALIC}${DARKGRAY}${joke}${RESET}"
 fi
+
+echo
