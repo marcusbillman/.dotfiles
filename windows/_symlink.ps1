@@ -9,9 +9,9 @@ if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 
 # Hashtable with all dotfiles in the repo and the corresponding symlink paths
 $dotfiles = @{
-  ".gitconfig"    = "~\.gitconfig"
-  "settings.json" = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
-  "WSL2Proxy.ps1" = "~\WSL2Proxy.ps1"
+  "git\.gitconfig"                 = "~\.gitconfig"
+  "windows-terminal\settings.json" = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+  "scripts\wsl2-proxy.ps1"         = "~\scripts\wsl2-proxy.ps1"
 }
 
 # Loop through all dotfiles in the hashtable
