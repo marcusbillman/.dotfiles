@@ -1,0 +1,36 @@
+/*
+    Custom system-wide keybindings
+
+    KEY MODIFIERS
+    ^ : Ctrl
+    $ : Shift
+    ~ : Option
+    @ : Command
+    # : Numeric Keypad
+
+    NON-PRINTABLE KEY CODES
+    Up Arrow:       \UF700        Backspace:    \U0008        F1: \UF704
+    Down Arrow:     \UF701        Tab:          \U0009        F2: \UF705
+    Left Arrow:     \UF702        Escape:       \U001B        F3: \UF706
+    Right Arrow:    \UF703        Enter:        \U000A        ...
+    Insert:         \UF727        Page Up:      \UF72C
+    Delete:         \UF728        Page Down:    \UF72D
+    Home:           \UF729        Print Screen: \UF72E
+    End:            \UF72B        Scroll Lock:  \UF72F
+    Help:           \UF746        Pause:        \UF730
+    Delete (macOS): \U007F        Menu:         \UF735
+
+    GitHub Gist for inspiration:
+    https://gist.github.com/trusktr/1e5e516df4e8032cbc3d
+
+    Archived Apple documentation:
+    https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html
+*/
+
+{
+    /* Special characters like on Windows Nordic layout */
+    "~7" = (insertText:, "{");
+    "~0" = (insertText:, "}");
+    "~+" = (insertText:, "\\");
+    "~<" = (insertText:, "|");
+}
