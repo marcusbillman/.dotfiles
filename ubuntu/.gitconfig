@@ -1,5 +1,14 @@
 [user]
 	name = Marcus Billman
 	email = 54668482+marcusbillman@users.noreply.github.com
-[credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQRRIi3REytmMDly+X4nP+SoEU2vzItblM5Zn238fIT
+# [credential "https://github.com"]
+# 	helper = !/usr/bin/gh auth git-credential
+[core]
+	sshCommand = ssh.exe
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/mnt/c/Users/Marcus/AppData/Local/1Password/app/8/op-ssh-sign-wsl"
+[commit]
+  gpgsign = true
