@@ -7,5 +7,6 @@ ln -siv "$base/macos/DefaultKeyBinding.dict" ~/Library/KeyBindings/DefaultKeyBin
 ln -siv "$base/.gitconfig"                   ~/.gitconfig
 ln -siv "$base/.config/micro/bindings.json"  ~/.config/micro/bindings.json
 ln -siv "$base/.config/micro/settings.json"  ~/.config/micro/settings.json
+ln -siv "$base/zsh/.p10k.zsh"                ~/.p10k.zsh
 
 touch ~/.hushlogin
