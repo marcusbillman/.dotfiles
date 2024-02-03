@@ -2,7 +2,7 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_CUSTOM="$HOME/.dotfiles/ubuntu/.oh-my-zsh/custom"
+ZSH_CUSTOM="$HOME/.dotfiles/ubuntu/zsh/.oh-my-zsh/custom"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git magic-enter)
 HIST_STAMPS="yyyy-mm-dd"
