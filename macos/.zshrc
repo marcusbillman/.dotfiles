@@ -29,6 +29,7 @@ alias update="brew update && brew upgrade"
 alias c="cd ~/Code/"
 alias nano="micro"
 alias cat="bat"
+alias ls="exa --tree --level 1 --icons --ignore-glob=\"Icon*\""
 
 export DOTFILES="$HOME/.dotfiles/macos"
 
