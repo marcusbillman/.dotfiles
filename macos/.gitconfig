@@ -1,7 +1,7 @@
 [user]
 	name = Marcus Billman
 	email = 54668482+marcusbillman@users.noreply.github.com
-	signingkey = /Users/marcusbillman/.ssh/id_ed25519.pub
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQRRIi3REytmMDly+X4nP+SoEU2vzItblM5Zn238fIT
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -11,3 +11,5 @@
 	format = ssh
 [commit]
 	gpgsign = true
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
