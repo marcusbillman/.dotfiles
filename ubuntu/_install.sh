@@ -8,7 +8,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # Install packages
-sudo apt install -y cmatrix cowsay figlet gh make ranger sl toilet zsh
+sudo apt install -y bat cmatrix cowsay exa figlet gh jq make sl toilet zsh
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -21,8 +21,8 @@ n install latest
 curl https://getmic.ro | bash
 sudo mv micro /usr/bin
 
-# Create 'CodeWSL' directory
-mkdir ~/CodeWSL
+# Create 'Code' directory
+mkdir ~/Code
 
 # Run symlink script, forcing overwrites
 ~/.dotfiles/ubuntu/_symlink.sh -f
