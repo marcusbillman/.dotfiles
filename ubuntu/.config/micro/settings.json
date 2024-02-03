@@ -1,13 +1,6 @@
 {
-    "autosu": true,
-    "colorscheme": "cmc-16-custom",
+    "colorscheme": "cmc-16",
     "diffgutter": true,
-    "eofnewline": false,
-    "ignorecase": false,
-    "pluginchannels": [
-        "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
-    ],
-    "pluginrepos": [],
     "tabmovement": true,
     "tabsize": 2,
     "tabstospaces": true
