@@ -32,7 +32,7 @@ export BROWSER="/mnt/c/Windows/explorer.exe"
 alias update="sudo apt update && sudo apt upgrade -y"
 alias c="cd ~/Code/"
 alias nano="micro"
-alias cat="bat"
+alias cat="batcat"
 alias ls="exa --tree --level 1 --icons"
 
 export DOTFILES="$HOME/.dotfiles/ubuntu"
