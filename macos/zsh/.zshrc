@@ -4,6 +4,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_CUSTOM="$HOME/.dotfiles/macos/zsh/.oh-my-zsh/custom"
 ZSH_THEME="powerlevel10k/powerlevel10k"
+MAGIC_ENTER_OTHER_COMMAND="ls"
 plugins=(git magic-enter)
 HIST_STAMPS="yyyy-mm-dd"
 
