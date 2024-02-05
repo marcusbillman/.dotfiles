@@ -1,4 +1,6 @@
-# ==== OH-MY-ZSH ============================================================= #
+export DOTFILES="$HOME/.dotfiles/macos"
+
+# ---- OH-MY-ZSH ------------------------------------------------------------- #
 
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -8,23 +10,20 @@ MAGIC_ENTER_OTHER_COMMAND="ls"
 plugins=(git magic-enter)
 HIST_STAMPS="yyyy-mm-dd"
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
 source $ZSH/oh-my-zsh.sh
 
-# ==== POWERLEVEL10K ========================================================= #
+# ---- POWERLEVEL10K --------------------------------------------------------- #
 
 # To customize prompt, run "p10k configure" or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# ==== NVM =================================================================== #
+# ---- NVM ------------------------------------------------------------------- #
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# ==== ALIASES AND VARIABLES ================================================= #
+# ---- ALIASES --------------------------------------------------------------- #
 
 alias update="brew update && brew upgrade"
 alias c="cd ~/Code/"
@@ -32,9 +31,7 @@ alias nano="micro"
 alias cat="bat"
 alias ls="exa --tree --level 1 --icons --ignore-glob=\"Icon*\""
 
-export DOTFILES="$HOME/.dotfiles/macos"
-
-# ==== STARTUP =============================================================== #
+# ---- SCRIPTS --------------------------------------------------------------- #
 
 # Fancy greeting message
 $DOTFILES/scripts/hello.sh

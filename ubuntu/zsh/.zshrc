@@ -1,4 +1,6 @@
-# ----- OH-MY-ZSH ------------------------------------------------------------- #
+export DOTFILES="$HOME/.dotfiles/ubuntu"
+
+# ---- OH-MY-ZSH ------------------------------------------------------------- #
 
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -8,27 +10,24 @@ MAGIC_ENTER_OTHER_COMMAND="ls"
 plugins=(git magic-enter)
 HIST_STAMPS="yyyy-mm-dd"
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
 source $ZSH/oh-my-zsh.sh
 
-# ----- POWERLEVEL10K --------------------------------------------------------- #
+# ---- POWERLEVEL10K --------------------------------------------------------- #
 
 # To customize prompt, run "p10k configure" or edit ~/.p10k.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# ----- N --------------------------------------------------------------------- #
+# ---- N --------------------------------------------------------------------- #
 
 # n-install (http://git.io/n-install-repo)
 export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
-# ----- WSL ------------------------------------------------------------------- #
+# ---- WSL ------------------------------------------------------------------- #
 
 # Use Windows default browser
 export BROWSER="/mnt/c/Windows/explorer.exe"
 
-# ----- ALIASES AND VARIABLES ------------------------------------------------- #
+# ---- ALIASES --------------------------------------------------------------- #
 
 alias update="sudo apt update && sudo apt upgrade -y"
 alias c="cd ~/Code/"
@@ -36,9 +35,7 @@ alias nano="micro"
 alias cat="batcat"
 alias ls="exa --tree --level 1 --icons"
 
-export DOTFILES="$HOME/.dotfiles/ubuntu"
-
-# ----- STARTUP --------------------------------------------------------------- #
+# ---- SCRIPTS --------------------------------------------------------------- #
 
 # Fancy greeting message
 $DOTFILES/scripts/hello.sh
