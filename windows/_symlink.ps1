@@ -7,19 +7,16 @@ if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
   }
 }
 
-# Hashtable with all dotfiles in the repo and the corresponding symlink paths
 $dotfiles = @{
+# Target path                        Symlink path
   "git\.gitconfig"                 = "~\.gitconfig"
   "windows-terminal\settings.json" = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
   "scripts\wsl2-proxy.ps1"         = "~\scripts\wsl2-proxy.ps1"
 }
 
-# Loop through all dotfiles in the hashtable
+# Create a symlink for each dotfile in the hashtable above
 foreach ($repo_file_name in $dotfiles.keys) {
-  # Get the absolute path to the repo dotfile by prefixing the script's parent path
   $repo_file_path = "$PSScriptRoot\$repo_file_name"
-  # -Force: Overwrite existing files with new symlinks
-  # -Confirm: Prompt the user before each symlink is created
   New-Item -ItemType SymbolicLink -Path $dotfiles[$repo_file_name] -Target $repo_file_path -Force -Confirm
 }
 
