@@ -67,20 +67,16 @@ When asked to set `zsh` as the default shell, press Enter to confirm. Then type 
 
 After the script has finished, close the terminal window and launch Windows Terminal. Done!
 
-## Notes
+## Symlink scripts
 
-### Windows
+Run the `_symlink.sh` or `_symlink.ps1` scripts to create symlinks for all dotfiles in the repository. The dotfiles in the repository are categorised by app/tool --- this file structure does not reflect where the symlinks will be placed by the scripts.
 
-The dotfiles inside the repo's `windows` directory are categorised by app/tool and do not reflect where the symlinks will be placed. The symlink script (`_symlink.ps1`) includes a hashtable that defines the destination pat for each dotfile. **When adding or removing files in the `windows` part of the repository, the hashtable needs to be updated.**
+The scripts include definitions for target paths and symlinks paths for each dotfile. **When adding or removing dotfiles in the repository, these scripts must be updated.**
 
-For safety, the symlink script will prompt the user before creating each symlink. **Accepting the prompt will overwrite any existing file at the symlink path. Simply pressing Enter will act as a "yes".**
+For safety, the scripts will prompt you before creating each symlink. Accepting the prompt will overwrite any existing file at the symlink path. Pressing Enter without typing anything will act as a
+- **"yes"** on Windows
+- **"no"** on macOS and Ubuntu.
 
-### Ubuntu
+## Install scripts
 
-The files in the repo's `ubuntu` directory exactly reflects the file system structure beginning from the home directory (`~`). The symlink script (`_symlink.sh`) automatically detects the dotfiles in the repo and creates symlinks at the corresponding location in the file system. **Files can be added or removed in the `ubuntu` part of the repository without modifying the symlink script.**
-
-The symlink script only prompts the user if there is already a file where the symlink is being created. **Accepting the prompt will overwrite the existing file at the symlink path. Simply pressing Enter will act as a "no".** To force overwriting without prompting, run the symlink script with the `-f` option.
-
-### macOS
-
-As the MacBook is a fairly new addition to my setup, I haven't created install and symlink scripts for macOS. There are also dotfiles missing from the repo.
+Run the `install.sh` script to quickly set up a system with most of my preferred packages and settings.
