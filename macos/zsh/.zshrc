@@ -14,10 +14,11 @@ eval "$(zoxide init zsh)"
 
 alias update="brew update && brew upgrade"
 alias c="cd ~/Code/"
+alias cd="z"
 alias nano="micro"
 alias cat="bat"
-alias ls="exa --tree --level 1 --icons --ignore-glob=\"Icon*\""
-alias tree="exa --tree --icons --ignore-glob=\"Icon*\""
+alias ls="eza --tree --level 1 --icons --ignore-glob=\"Icon*\""
+alias tree="eza --tree --icons --ignore-glob=\"Icon*\""
 
 # ---- SCRIPTS --------------------------------------------------------------- #
 
