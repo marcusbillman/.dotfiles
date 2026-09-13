@@ -35,6 +35,3 @@ alias tree="eza --tree --icons --ignore-glob=\"Icon*\""
 
 # Fancy greeting message
 $DOTFILES/scripts/hello.sh
-
-# Programming joke
-$DOTFILES/scripts/joke.sh
