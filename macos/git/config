@@ -3,7 +3,7 @@
 	email = 54668482+marcusbillman@users.noreply.github.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQRRIi3REytmMDly+X4nP+SoEU2vzItblM5Zn238fIT
 [includeIf "gitdir:~/Code/school/"]
-	path = ~/.gitconfig.school
+	path = ~/.config/git/config-school
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
