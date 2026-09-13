@@ -8,6 +8,5 @@ ln -siv "$base/macos/.hushlogin"             ~/.hushlogin
 ln -siv "$base/git/config"                   ~/.config/git/config
 ln -siv "$base/micro/bindings.json"          ~/.config/micro/bindings.json
 ln -siv "$base/micro/settings.json"          ~/.config/micro/settings.json
-ln -siv "$base/zsh/.p10k.zsh"                ~/.p10k.zsh
 ln -siv "$base/zsh/.zshrc"                   ~/.zshrc
 ln -siv "$base/zsh/.zprofile"                ~/.zprofile
